@@ -1,5 +1,5 @@
-{
-    "name": "DevContainer (OOP) - C++",
+    {
+        "name": "DevContainer: C++",
     "build": {
       "dockerfile": "Dockerfile",
       "args": {
@@ -23,23 +23,19 @@
         },
 
         "extensions": [
-            "ms-vscode.cpptools",
-            "ms-vscode.cpptools-extension-pack",
-            "ms-vscode.cmake-tools"
+          "ms-vscode.cpptools",
+          "ms-vscode.cmake-tools",
+          "twxs.cmake",
+          "jeff-hykin.better-cpp-syntax"
         ]
       }
     },
 
-    "containerEnv": {
-  "VSCODE_MARKETPLACE": "http://localhost"
-    },
-    "onCreateCommand": "sudo apt update && sudo apt-get install bash -y && sudo apt install -y software-properties-common apt-transport-https ca-certificates lsb-release libarchive-tools curl gnupg && sudo apt update --fix-missing && sudo apt-get install -y build-essential gdb cmake ninja-build clang-format clang-tidy cppcheck valgrind && echo 'export CC=gcc' >> ~/.bashrc && echo 'export CXX=g++' >> ~/.bashrc",
-
-    "postCreateCommand": "sh prepare.sh && chmod -R a-w ~/.vscode-server/extensions",
-
+    "onCreateCommand": "sudo apt update && sudo apt install -y build-essential cmake gdb",
+    "postCreateCommand": "bash prepare.sh || { echo 'prepare.sh failed'; exit 1; }",
     "runArgs": [
       "--name",
-      "DevContainer_OOP_CPP"
+      "DevContainer_CPP"
     ],
     "remoteUser": "root"
   }

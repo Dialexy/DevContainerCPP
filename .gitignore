@@ -1,0 +1,45 @@
+#SSH saftey
+**/.ssh
+
+# Java-related files
+*.class
+*.jar
+*.war
+*.ear
+*.iml
+*.log
+
+# Maven-related files
+target/
+dependency-reduced-pom.xml
+release.properties
+pom.xml.tag
+pom.xml.releaseBackup
+
+
+# VS Code files
+.vscode/
+.vscode-server/
+
+# Dev Container files
+.devcontainer/.env
+.devcontainer/.devcontainer.env
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+
+# Logs and debug files
+*.log
+*.out
+*.err
+
+# Generated files
+bin/
+gen/

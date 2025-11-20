@@ -1,10 +1,25 @@
+# Verify GCC installation
+if ! command -v gcc &> /dev/null; then
+    echo "Error: GCC is not installed or not in PATH. Please install GCC."
+    echo "Current PATH: $PATH"
+    exit 1
+fi
 
-#!/usr/bin/env bash
+# Verify CMake installation
+if ! command -v cmake &> /dev/null; then
+    echo "Error: CMake is not installed or not in PATH. Please install CMake."
+    echo "Current PATH: $PATH"
+    exit 1
+fi
 
-# echo "Creating Module Directory Structure"
-# /bin/bash -c "mkdir -p tutorials/{week01,week02,week03,week04,week05,week06,week07,week08,week09,week10,week11,week12} tasks/{task01,task02,task03,task04,task05}"
+# Verify GDB installation
+if ! command -v gdb &> /dev/null; then
+    echo "Error: GDB is not installed or not in PATH. Please install GDB."
+    echo "Current PATH: $PATH"
+    exit 1
+fi
 
+# Print confirmation
+echo "Environment is ready for C++ development."
 
-/bin/bash -c "rm echo"
 exec "$@"
-
