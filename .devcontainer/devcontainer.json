@@ -1,0 +1,46 @@
+{
+    "name": "DevContainer (OOP) - C++",
+    "build": {
+      "dockerfile": "Dockerfile",
+      "args": {
+        "VARIANT": "jammy"
+      }
+    },
+    "otherPortsAttributes": {
+      "onAutoForward": "openBrowser"
+    },
+
+    "customizations": {
+      "vscode": {
+        "settings": {
+          "terminal.integrated.profiles.linux": {
+            "bash": {
+              "path": "/usr/bin/bash",
+              "icon": "terminal-bash"
+            }
+          },
+          "terminal.integrated.defaultProfile.linux": "bash"
+        },
+
+        "extensions": [
+            "ms-vscode.cpptools",
+            "ms-vscode.cpptools-extension-pack",
+            "ms-vscode.cmake-tools"
+        ]
+      }
+    },
+
+    "containerEnv": {
+  "VSCODE_MARKETPLACE": "http://localhost"
+    },
+    "onCreateCommand": "sudo apt update && sudo apt-get install bash -y && sudo apt install -y software-properties-common apt-transport-https ca-certificates lsb-release libarchive-tools curl gnupg && sudo apt update --fix-missing && sudo apt-get install -y build-essential gdb cmake ninja-build clang-format clang-tidy cppcheck valgrind && echo 'export CC=gcc' >> ~/.bashrc && echo 'export CXX=g++' >> ~/.bashrc",
+
+    "postCreateCommand": "sh prepare.sh && chmod -R a-w ~/.vscode-server/extensions",
+
+    "runArgs": [
+      "--name",
+      "DevContainer_OOP_CPP"
+    ],
+    "remoteUser": "root"
+  }
+
