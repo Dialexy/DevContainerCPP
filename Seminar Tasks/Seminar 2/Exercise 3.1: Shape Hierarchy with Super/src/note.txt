@@ -1,0 +1,2 @@
+This was already done in the seminar 2 task.
+New implementation consits of super calls and herons formula for non right angle triangles.
