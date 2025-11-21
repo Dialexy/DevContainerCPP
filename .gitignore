@@ -1,4 +1,4 @@
-#SSH saftey
+# Ignore SSH-related files for safety
 **/.ssh
 
 # Java-related files
@@ -43,3 +43,28 @@ Thumbs.db
 # Generated files
 bin/
 gen/
+
+# C++ build artifacts
+*.o
+*.obj
+*.exe
+*.out
+*.a
+*.lib
+*.so
+*.dll
+*.dSYM/
+*.dSYM/*
+*.d
+*.gcno
+*.gcda
+*.gcov
+*.gch
+*.pch
+
+# CMake build directories
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+build/
