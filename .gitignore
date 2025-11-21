@@ -16,7 +16,6 @@ release.properties
 pom.xml.tag
 pom.xml.releaseBackup
 
-
 # VS Code files
 .vscode/
 .vscode-server/
@@ -61,6 +60,11 @@ gen/
 *.gcov
 *.gch
 *.pch
+*.ipch
+*.tlog
+*.idb
+*.pdb
+*.ilk
 
 # CMake build directories
 CMakeFiles/
@@ -68,3 +72,14 @@ CMakeCache.txt
 cmake_install.cmake
 Makefile
 build/
+
+# Ninja build files
+.ninja_deps
+.ninja_log
+build.ninja
+rules.ninja
+
+# Qt-specific files
+moc_*.cpp
+qrc_*.cpp
+ui_*.h
