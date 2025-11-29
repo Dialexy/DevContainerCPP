@@ -1,53 +1,100 @@
-# Ignore SSH-related files for safety
-**/.ssh
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
 
-# Java-related files
-*.class
-*.jar
-*.war
-*.ear
-*.iml
-*.log
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
 
-# Maven-related files
-target/
-dependency-reduced-pom.xml
-release.properties
-pom.xml.tag
-pom.xml.releaseBackup
+# Linux
+*~
 
-# VS Code files
+# VS Code
 .vscode/
 .vscode-server/
 
-# Dev Container files
-.devcontainer/.env
-.devcontainer/.devcontainer.env
+# JetBrains IDEs
+.idea/
+*.iml
+*.iws
+*.ipr
 
-# OS-specific files
-.DS_Store
-Thumbs.db
+# Sublime
+*.sublime-workspace
+*.sublime-project
 
-# Temporary files
-*.tmp
-*.temp
+# Vim / Emacs Swap
 *.swp
 *.swo
+*.swn
+*.swm
 
-# Logs and debug files
+# Dev Container / Docker
+.devcontainer/.env
+.devcontainer/*.env
+.devcontainer/*.local
+
+# Docker
+docker-compose.override.yml
+*.env.docker
+
+# Environment / Secrets
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+
+# Build / Generated Directories
+bin/
+out/
+gen/
+generated/
+temp/
+cache/
+build/
+*.tsbuildinfo
+
+# Logs & Debug
 *.log
+logs/
 *.out
 *.err
 
-# Generated files
-bin/
-gen/
+# Temporary Files
+*.tmp
+*.temp
+*.bak
 
-# C++ build artifacts
+# Tools
+*.lock
+*.pid
+
+# Testing
+coverage/
+.nyc_output/
+*.lcov
+
+# Backup & Archive Files
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
+*.old
+
+# Metadata Files
+*.orig
+*.rej
+*.patch
+
+# C++ Build Artifacts
 *.o
 *.obj
 *.exe
-*.out
 *.a
 *.lib
 *.so
@@ -66,20 +113,19 @@ gen/
 *.pdb
 *.ilk
 
-# CMake build directories
+# CMake Build Directories
 CMakeFiles/
 CMakeCache.txt
 cmake_install.cmake
 Makefile
-build/
 
-# Ninja build files
+# Ninja Build Files
 .ninja_deps
 .ninja_log
 build.ninja
 rules.ninja
 
-# Qt-specific files
+# Qt-Specific Files
 moc_*.cpp
 qrc_*.cpp
 ui_*.h

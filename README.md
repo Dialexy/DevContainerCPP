@@ -1,6 +1,6 @@
 # Dev Container for OOP (C++)
 
-This is a personal dev container converted from Java to C++ for practicing Object-Oriented Programming tasks.
+This is a dev container for C++.
 
 ## What's Included:
 
