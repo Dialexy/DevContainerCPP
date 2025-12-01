@@ -113,6 +113,15 @@ coverage/
 *.pdb
 *.ilk
 
+# C++ Runtime Metadata & Compiled Executables
+**/src/*
+!**/src/*.cpp
+!**/src/*.h
+!**/src/*.hpp
+!**/src/*.c
+!**/src/*.cc
+!**/src/*.cxx
+
 # CMake Build Directories
 CMakeFiles/
 CMakeCache.txt
