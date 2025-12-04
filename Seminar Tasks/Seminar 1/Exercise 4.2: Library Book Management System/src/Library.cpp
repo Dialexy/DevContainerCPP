@@ -1,7 +1,6 @@
 #include <iostream>
 #include <string>
 #include <unordered_map>
-#inlcude <optional>
 
 
 class Library {
@@ -22,14 +21,14 @@ class Library {
             }
         }
 
-        std::optional<Book> findBook(const std::string& isbn) const {
+        Book* findBook(const std::string& isbn) {
             auto it = books.find(isbn);
 
             if (it != books.end()) {
-                return it->second;
+                return &(it->second);
             }
 
-            return std::nullopt;
+            return nullptr;
 
         }
 };
