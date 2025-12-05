@@ -1,3 +1,5 @@
+#include <iostream>
+
 class intMatrix {
 
     private:
@@ -19,7 +21,7 @@ class intMatrix {
             }
 
             for (int i = 0; i < rows; i++) {
-                for (int j = 0; j < cols; j++) { 
+                for (int j = 0; j < cols; j++) {
                     array2D[i][j] = 0;
                 }
             }
