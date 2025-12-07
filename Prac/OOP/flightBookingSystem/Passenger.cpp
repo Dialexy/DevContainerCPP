@@ -1,10 +1,19 @@
-#include <iostream>
-#include <string>
+#include "Passenger.h"
 
-class Passenger {
+Passenger::Passenger(std::string name, std::string passportNum, std::string seatNum) {
+    this->name = name;
+    this->passportNum = passportNum;
+    this->seatNum = seatNum;
+}
 
-    private:
-        std::string name;
-        std::string passportName;
-        std::string seatNum;
-};
+std::string Passenger::getName() const {
+    return name;
+}
+
+std::string Passenger::getPassportNum() const {
+    return passportNum;
+}
+
+std::string Passenger::getSeatNum() const {
+    return seatNum;
+}
