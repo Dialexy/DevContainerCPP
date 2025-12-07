@@ -113,14 +113,18 @@ coverage/
 *.pdb
 *.ilk
 
-# C++ Runtime Metadata & Compiled Executables
-**/src/*
+# C++ Compiled Executables
+# Ignore executable files in common output locations
+**/src/[A-Z]*
+**/src/[a-z]*[a-z]
 !**/src/*.cpp
 !**/src/*.h
 !**/src/*.hpp
 !**/src/*.c
 !**/src/*.cc
 !**/src/*.cxx
+!**/src/*.sh
+!**/src/*/
 
 # CMake Build Directories
 CMakeFiles/
