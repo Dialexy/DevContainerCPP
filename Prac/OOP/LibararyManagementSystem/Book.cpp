@@ -15,7 +15,10 @@ Book::Book(const Book& other) {
     this->availableCopies = other.availableCopies;
     this->maxCopies = other.maxCopies;
     this->borrowers = other.borrowers;
-}
+template <class T>
+bool BoundedQueue<T>::empty() const {
+  return (!full_ && (head_ == tail_));
+}}
 
 void Book::borrowBook(const Borrower& borrower) {
     if (availableCopies > 0) {
